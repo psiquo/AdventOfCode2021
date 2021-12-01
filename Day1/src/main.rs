@@ -56,12 +56,6 @@ fn part_2(filename : &str){
             windows[c] += if c != i%3 {num} else {0};
         }
 
-        print!("{}: ",i);
-        for c in 0..3 {
-            print!("{} ",windows[c]);
-        }
-        println!("");
-
         match i % 3 {
             2 => compare(0, 2, &mut windows, &mut count),
             0 => compare(1, 0, &mut windows, &mut count),
